@@ -8,7 +8,7 @@ import {
 } from "@/constants";
 import React from "react";
 import { motion } from "framer-motion";
-import SkillText from "./Skilltext";
+import SkillText from "./skilltext";
 import { BoltIcon } from "@heroicons/react/24/outline";
 import Image, { StaticImageData } from "next/image";
 

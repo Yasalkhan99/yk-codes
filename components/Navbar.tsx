@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import gitIcon from '../public/gitwhite.png';
 import instagramIcon from '../public/instagram.svg';
-import linkedinIcon from '../public/linkedin.svg';
 
 const navItems = [
   { id: "about-me", label: "About" },
@@ -16,7 +15,6 @@ const navItems = [
 ];
 
 const socials = [
-  { name: "LinkedIn", icon: linkedinIcon, link: "https://www.linkedin.com/in/yasal-khan-3b9048b7/" },
   { name: "GitHub", icon: gitIcon, link: "https://github.com/Yasalkhan99" },
   { name: "Instagram", icon: instagramIcon, link: "https://instagram.com" },
 ];
@@ -160,10 +158,8 @@ export default function Navbar() {
               className="border border-slate-700 rounded-lg p-1.5 bg-black/30 hover:bg-cyan-900/30 transition"
               aria-label={social.name}
             >
-              {social.name === "LinkedIn" ? (
-                <svg viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5 text-cyan-300 hover:text-cyan-400">
-                  <path d="M27 0H5C2.2 0 0 2.2 0 5v22c0 2.8 2.2 5 5 5h22c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM9.4 27H5.6V12.1h3.8V27zm-1.9-17c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1s2.1 1 2.1 2.1c0 1.1-.9 2.1-2.1 2.1zm19.5 17h-3.8v-7.2c0-1.7-.6-2.8-2.1-2.8-1.1 0-1.7.7-2 1.4-.1.3-.1.7-.1 1.1V27h-3.8s.1-12.5 0-13.9h3.8v2c.5-.8 1.4-2 3.5-2 2.6 0 4.5 1.7 4.5 5.3V27z"/>
-                </svg>
+              {social.name === "GitHub" ? (
+                <Image src="/gitwhite.png" alt={social.name} width={18} height={18} className="rounded" />
               ) : (
                 <Image src={social.icon} alt={social.name} width={18} height={18} className="rounded" />
               )}
@@ -261,11 +257,7 @@ export default function Navbar() {
                     className="border border-slate-700 rounded-lg p-2 bg-black/30 hover:bg-cyan-900/30 transition"
                     aria-label={social.name}
                   >
-                    {social.name === "LinkedIn" ? (
-                      <svg viewBox="0 0 32 32" fill="currentColor" className="w-7 h-7 text-cyan-300 hover:text-cyan-400">
-                        <path d="M27 0H5C2.2 0 0 2.2 0 5v22c0 2.8 2.2 5 5 5h22c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM9.4 27H5.6V12.1h3.8V27zm-1.9-17c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1s2.1 1 2.1 2.1c0 1.1-.9 2.1-2.1 2.1zm19.5 17h-3.8v-7.2c0-1.7-.6-2.8-2.1-2.8-1.1 0-1.7.7-2 1.4-.1.3-.1.7-.1 1.1V27h-3.8s.1-12.5 0-13.9h3.8v2c.5-.8 1.4-2 3.5-2 2.6 0 4.5 1.7 4.5 5.3V27z"/>
-                      </svg>
-                    ) : social.name === "GitHub" ? (
+                    {social.name === "GitHub" ? (
                       <Image src="/gitwhite.png" alt={social.name} width={28} height={28} className="rounded" />
                     ) : (
                       <Image src={social.icon} alt={social.name} width={28} height={28} className="rounded" />
