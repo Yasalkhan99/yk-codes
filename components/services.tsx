@@ -133,7 +133,6 @@ const Services = () => {
               whileHover={{ y: -5, scale: 1.02 }}
             >
           <ServiceCard
-            src={service.src}
             title={service.title}
             description={service.description}
                 icon={service.icon}
