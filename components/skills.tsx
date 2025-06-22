@@ -8,13 +8,13 @@ import {
 } from "@/constants";
 import React from "react";
 import { motion } from "framer-motion";
-import SkillText from "./skilltext";
+import SkillText from "./Skilltext";
 import { BoltIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface Skill {
   skill_name: string;
-  Image: string;
+  Image: StaticImageData;
   width: number;
   height: number;
 }

@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, CheckCircleIcon, ChevronDownIcon, BoltIcon } from '@heroicons/react/24/solid';
+import Image, { StaticImageData } from "next/image";
+import SkillText from "./Skilltext";
 
 // Initialize EmailJS with your public key
 emailjs.init("vh4WFoT9u9YE96zQe");
