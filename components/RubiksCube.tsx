@@ -1,13 +1,12 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, PanInfo } from 'framer-motion';
 
 const RubiksCube = () => {
-  const [isDragging, setIsDragging] = useState(false);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
 
-  const handleDrag = (event: any, info: any) => {
+  const handleDrag = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     setRotation({
       x: rotation.x + info.delta.y * 0.5,
       y: rotation.y + info.delta.x * 0.5

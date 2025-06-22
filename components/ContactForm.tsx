@@ -76,23 +76,23 @@ const faqs = [
 ];
 
 // Recent Projects
-const recentProjects = [
-  {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with React and Node.js",
-    image: "/project1.jpg"
-  },
-  {
-    title: "Portfolio Website",
-    description: "Modern portfolio website with Next.js and Tailwind CSS",
-    image: "/project2.jpg"
-  },
-  {
-    title: "AI Image Generator",
-    description: "AI-powered image generation tool using OpenAI",
-    image: "/project3.jpg"
-  }
-];
+// const recentProjects = [
+//   {
+//     title: "E-Commerce Platform",
+//     description: "Full-stack e-commerce solution with React and Node.js",
+//     image: "/project1.jpg"
+//   },
+//   {
+//     title: "Portfolio Website",
+//     description: "Modern portfolio website with Next.js and Tailwind CSS",
+//     image: "/project2.jpg"
+//   },
+//   {
+//     title: "AI Image Generator",
+//     description: "AI-powered image generation tool using OpenAI",
+//     image: "/project3.jpg"
+//   }
+// ];
 
 const ContactForm = () => {
   const { scrollYProgress } = useScroll();
@@ -111,7 +111,7 @@ const ContactForm = () => {
   const [error, setError] = useState("");
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [selectedPackage, setSelectedPackage] = useState("");
+  // const [selectedPackage, setSelectedPackage] = useState("");
 
   useEffect(() => {
     const testimonialTimer = setInterval(() => {
@@ -242,7 +242,7 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Have a project in mind? Let's discuss how we can bring your ideas to life.
+            Have a project in mind? Let&apos;s discuss how we can bring your ideas to life.
           </motion.p>
         </motion.div>
 
@@ -461,27 +461,31 @@ const ContactForm = () => {
               className="bg-black/20 backdrop-blur-xl p-4 rounded-xl border border-purple-500/20 shadow-xl"
             >
               <h3 className="text-lg font-semibold text-white mb-3">Client Testimonials</h3>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentTestimonial}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="space-y-2"
-                >
-                  <div className="flex items-center space-x-1">
-                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                      <StarIcon key={i} className="w-4 h-4 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 text-sm italic">"{testimonials[currentTestimonial].text}"</p>
-                  <div>
-                    <p className="text-white text-sm font-semibold">{testimonials[currentTestimonial].name}</p>
-                    <p className="text-gray-400 text-xs">{testimonials[currentTestimonial].role}</p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold mb-4 text-white">
+                  What Our Clients Say
+                </h3>
+                <div className="relative h-40 flex items-center justify-center">
+                  <AnimatePresence>
+                    <motion.div
+                      key={currentTestimonial}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.5 }}
+                      className="absolute w-full"
+                    >
+                      <p className="text-lg text-gray-300 italic">
+                        &quot;{testimonials[currentTestimonial].text}&quot;
+                      </p>
+                      <p className="text-sm font-semibold mt-2 text-white">
+                        - {testimonials[currentTestimonial].name},{" "}
+                        {testimonials[currentTestimonial].role}
+                      </p>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+              </div>
             </motion.div>
 
             {/* FAQ Section - More Compact */}
@@ -530,6 +534,22 @@ const ContactForm = () => {
               </div>
             </motion.div>
           </motion.div>
+        </div>
+
+        <div className="text-center">
+          <h3 className="text-2xl font-semibold mb-4 text-white">
+            Let&apos;s Build Something Amazing Together
+          </h3>
+          <p className="text-gray-400 mb-6">
+            I&apos;m currently available for freelance work and open to new
+            opportunities.
+          </p>
+          <a
+            href="mailto:yasalkhan90@gmail.com"
+            className="inline-block px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300"
+          >
+            Get in Touch
+          </a>
         </div>
       </motion.div>
     </section>

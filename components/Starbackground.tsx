@@ -2,21 +2,23 @@
 
 import React, { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
-// @ts-ignore
+import { Points, PointMaterial } from "@react-three/drei";
+// @ts-expect-error
 import * as random from "maath/random/dist/maath-random.esm";
 import * as THREE from 'three';
 
-const StarBackground = (props: any) => {
-  const ref = useRef<any>(null);
+const StarBackground = () => {
+  const ref = useRef<THREE.Points>(null!);
 
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(20000), { radius: 1.2 })
   );
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta/40;
-    ref.current.rotation.y -= delta/60;
+    if (ref.current) {
+      ref.current.rotation.x -= delta/40;
+      ref.current.rotation.y -= delta/60;
+    }
   })
 
 
@@ -27,7 +29,6 @@ const StarBackground = (props: any) => {
         positions={sphere}
         stride={3}
         frustumCulled
-        {...props}
         >
             <PointMaterial
                 transparent

@@ -4,14 +4,13 @@ import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
 interface Props {
-  src: string;
   title: string;
   description: string;
   icon: React.ElementType;
   features: string[];
 }
 
-const ServiceCard = ({ src, title, description, icon: Icon, features }: Props) => {
+const ServiceCard = ({ title, description, icon: Icon, features }: Props) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 

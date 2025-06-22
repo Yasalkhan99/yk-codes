@@ -10,6 +10,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SkillText from "./skilltext";
 import { BoltIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 interface Skill {
   skill_name: string;
@@ -37,9 +38,11 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
           whileHover={{ rotate: 360 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
-          <img
+          <Image
             src={skill.Image}
             alt={skill.skill_name}
+            width={skill.width}
+            height={skill.height}
             className="w-full h-full object-contain filter group-hover:brightness-150 transition-all duration-300"
           />
         </motion.div>

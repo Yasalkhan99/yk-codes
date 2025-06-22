@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
-import { slideInFromRight, slideInFromTop, slideInFromLeft } from "@/utils/motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { slideInFromLeft } from "@/utils/motion";
 
 // Terminal lines
 const introLines = [
@@ -270,13 +270,12 @@ const ClockTerminal = () => {
 // Market Trends Component
 const MarketTrends = () => {
   const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
-  const y = useTransform(scrollYProgress, [0, 0.2], [50, 0]);
-  const springY = useSpring(y, { stiffness: 100, damping: 30 });
+  const scale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
     <TerminalBox title="Market Trends" className="h-full">
-      <motion.div style={{ opacity, y: springY }} className="space-y-4">
+      <motion.div style={{ opacity, scale }} className="space-y-4">
         {marketTrends.map((section, index) => (
           <motion.div
             key={section.category}
@@ -313,6 +312,9 @@ const HeroContent = () => {
   const [showTechStack, setShowTechStack] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const { scrollYProgress } = useScroll();
+  const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 };
+  const y = useSpring(useTransform(scrollYProgress, [0, 0.2], [100, 0]), springConfig);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
 
   // Staggered reveal animations
   const containerVariants = {

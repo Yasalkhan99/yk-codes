@@ -1,10 +1,9 @@
 "use client"
 import React from 'react'
 import {motion, useScroll, useTransform, useSpring, Variants} from 'framer-motion'
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
-import { SparklesIcon, CodeBracketIcon, CommandLineIcon, AcademicCapIcon, RocketLaunchIcon, UserGroupIcon } from '@heroicons/react/24/solid'
+import { SparklesIcon, CodeBracketIcon, AcademicCapIcon, RocketLaunchIcon, UserGroupIcon } from '@heroicons/react/24/solid'
 
-const skillText = () => {
+const SkillText = () => {
   const { scrollYProgress } = useScroll();
   
   // Spring animation for smoother motion
@@ -161,4 +160,4 @@ const skillText = () => {
   )
 }
 
-export default skillText;
+export default SkillText;

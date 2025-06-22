@@ -8,9 +8,6 @@ import {
   PaintBrushIcon, 
   DevicePhoneMobileIcon, 
   RocketLaunchIcon, 
-  ShieldCheckIcon,
-  SparklesIcon,
-  CommandLineIcon,
   CpuChipIcon,
   CloudIcon,
   BoltIcon

@@ -19,10 +19,9 @@ const socials = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isInverted, setIsInverted] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+  const [theme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
       const stored = window.localStorage.getItem('theme');
       if (stored === 'dark' || stored === 'light') return stored;
@@ -33,7 +32,6 @@ export default function Navbar() {
     return 'light';
   });
   const sidebarRef = useRef<HTMLDivElement>(null);
-  const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -46,7 +44,7 @@ export default function Navbar() {
   }, [theme]);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+    const handleScroll = () => (window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -64,8 +62,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setWindowWidth(window.innerWidth);
-      const handleResize = () => setWindowWidth(window.innerWidth);
+      const handleResize = () => (window.innerWidth);
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
     }
@@ -84,10 +81,10 @@ export default function Navbar() {
   }, []);
 
   // Scroll to top on logo click
-  const handleLogoClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  // const handleLogoClick = (e: React.MouseEvent) => {
+  //   e.preventDefault();
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // };
 
   // Invert theme toggle logic
   const toggleInvertTheme = () => {
