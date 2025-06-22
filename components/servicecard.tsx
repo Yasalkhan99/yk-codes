@@ -6,7 +6,7 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 interface Props {
   title: string;
   description: string;
-  icon: React.ElementType;
+  icon: React.ComponentType<{ className?: string }>;
   features: string[];
 }
 
