@@ -393,7 +393,7 @@ const ContactForm = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-2 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-center text-sm"
                 >
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
 
