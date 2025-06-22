@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import * as HeroIcons from "@heroicons/react/24/solid"; // Import all icons
 
 interface Props {

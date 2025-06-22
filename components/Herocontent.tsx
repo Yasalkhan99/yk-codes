@@ -311,10 +311,10 @@ const MarketTrends = () => {
 const HeroContent = () => {
   const [showTechStack, setShowTechStack] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const { scrollYProgress } = useScroll();
-  const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 };
-  const y = useSpring(useTransform(scrollYProgress, [0, 0.2], [100, 0]), springConfig);
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+  // const { scrollYProgress } = useScroll();
+  // const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 };
+  // const y = useSpring(useTransform(scrollYProgress, [0, 0.2], [100, 0]), springConfig);
+  // const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
 
   // Staggered reveal animations
   const containerVariants = {

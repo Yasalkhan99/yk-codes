@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, CheckCircleIcon, StarIcon, ChevronDownIcon, BoltIcon } from '@heroicons/react/24/solid';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, CheckCircleIcon, ChevronDownIcon, BoltIcon } from '@heroicons/react/24/solid';
 
 // Initialize EmailJS with your public key
 emailjs.init("vh4WFoT9u9YE96zQe");
@@ -212,7 +212,7 @@ const ContactForm = () => {
                   }
                 }}
               >
-                {["Contact.", "Collaborate.", "Connect."].map((word, i) => (
+                {["Contact.", "Collaborate.", "Connect."].map((word) => (
                   <motion.span
                     key={word}
                     className="inline-block"
