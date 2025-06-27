@@ -1,71 +1,52 @@
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaDocker, FaFigma, FaGitAlt } from "react-icons/fa";
+import { SiTailwindcss, SiTypescript, SiNextdotjs, SiFramer, SiMongodb, SiFirebase, SiPostgresql, SiMysql, SiRedux, SiReactquery } from "react-icons/si";
+
 export const Skill_data = [
     {
       skill_name: "Html 5",
-      Image: "/html.png",
-      width: 80,
-      height: 80,
+      Icon: FaHtml5,
     },
     {
       skill_name: "Css",
-      Image: "/css.png",
-      width: 80,
-      height: 80,
+      Icon: FaCss3Alt,
     },
     {
       skill_name: "Java Script",
-      Image: "/js.png",
-      width: 65,
-      height: 65,
+      Icon: FaJs,
     },
     {
       skill_name: "Tailwind Css",
-      Image: "/tailwind.png",
-      width: 80,
-      height: 80,
+      Icon: SiTailwindcss,
     },
     {
       skill_name: "React",
-      Image: "/react.png",
-      width: 80,
-      height: 80,
+      Icon: FaReact,
     },
     
     {
       skill_name: "React Query",
-      Image: "/reactquery.png",
-      width: 80,
-      height: 80,
+      Icon: SiReactquery,
     },
     {
       skill_name: "Type Script",
-      Image: "/ts.png",
-      width: 80,
-      height: 80,
+      Icon: SiTypescript,
     },
     {
       skill_name: "Next js 13",
-      Image: "/next.png",
-      width: 80,
-      height: 80,
+      Icon: SiNextdotjs,
     },
     {
       skill_name: "Framer Motion",
-      Image: "/framer.png",
-      width: 80,
-      height: 80,
+      Icon: SiFramer,
     },
     
     {
       skill_name: "Node js",
-      Image: "/node-js.png",
-      width: 80,
-      height: 80,
+      Icon: FaNodeJs,
     },
     {
       skill_name: "Mongo db",
-      Image: "/mongodb.png",
-      width: 40,
-      height: 40,
+      Icon: SiMongodb,
     },
   
   ];
@@ -98,93 +79,61 @@ export const Skill_data = [
   export const Frontend_skill = [
     {
       skill_name: "Html 5",
-      Image: "/html.png",
-      width: 80,
-      height: 80,
+      Icon: FaHtml5,
     },
     {
       skill_name: "Css",
-      Image: "/css.png",
-      width: 80,
-      height: 80,
+      Icon: FaCss3Alt,
     },
     {
       skill_name: "Java Script",
-      Image: "/js.png",
-      width: 65,
-      height: 65,
+      Icon: FaJs,
     },
     {
       skill_name: "Tailwind Css",
-      Image: "/tailwind.png",
-      width: 80,
-      height: 80,
+      Icon: SiTailwindcss,
     },
     
     {
       skill_name: "React",
-      Image: "/react.png",
-      width: 80,
-      height: 80,
+      Icon: FaReact,
     },
     
     {
       skill_name: "React Query",
-      Image: "/reactquery.png",
-      width: 80,
-      height: 80,
+      Icon: SiReactquery,
     },
     {
       skill_name: "Type Script",
-      Image: "/ts.png",
-      width: 80,
-      height: 80,
+      Icon: SiTypescript,
     },
     {
       skill_name: "Next js 13",
-      Image: "/next.png",
-      width: 80,
-      height: 80,
+      Icon: SiNextdotjs,
     },
   ];
   
   export const Backend_skill = [
     {
       skill_name: "Node js",
-      Image: "/node-js.png",
-      width: 80,
-      height: 80,
+      Icon: FaNodeJs,
     },
     
     {
       skill_name: "Mongo db",
-      Image: "/mongodb.png",
-      width: 40,
-      height: 40,
+      Icon: SiMongodb,
     },
     {
       skill_name: "Fire base",
-      Image: "/Firebase.png",
-      width: 55,
-      height: 55,
+      Icon: SiFirebase,
     },
     {
       skill_name: "Postgre SQL",
-      Image: "/postger.png",
-      width: 70,
-      height: 70,
+      Icon: SiPostgresql,
     },
     {
       skill_name: "My SQL",
-      Image: "/mysql.png",
-      width: 70,
-      height: 70,
-    },
-    {
-      skill_name: "",
-      Image: "",
-      width: 50,
-      height: 50,
+      Icon: SiMysql,
     },
   ];
   
@@ -193,16 +142,12 @@ export const Skill_data = [
     
     {
       skill_name: "Docker",
-      Image: "/docker.webp",
-      width: 70,
-      height: 70,
+      Icon: FaDocker,
     },
   
     {
       skill_name: "Figma",
-      Image: "/figma.png",
-      width: 50,
-      height: 50,
+      Icon: FaFigma,
     },
   
   ];
@@ -213,9 +158,7 @@ export const Skill_data = [
     
      {
       skill_name: "",
-      Image: "",
-      width: 50,
-      height: 50,
+      Icon: "",
     },
 
 

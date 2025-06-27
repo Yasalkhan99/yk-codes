@@ -14,12 +14,11 @@ import Image from "next/image";
 
 interface Skill {
   skill_name: string;
-  Image: string;
-  width: number;
-  height: number;
+  Icon: React.ComponentType<{ className?: string; size?: number }>;
 }
 
 const SkillCard = ({ skill }: { skill: Skill }) => {
+  const { Icon } = skill;
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -34,17 +33,11 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
       <div className="absolute inset-0 bg-gradient-to-br from-[#ff00ff10] to-[#00ffff10] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative z-10 flex items-center gap-2">
         <motion.div 
-          className="w-8 h-8 relative"
+          className="w-8 h-8 flex items-center justify-center relative"
           whileHover={{ rotate: 360 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
-          <Image
-            src={skill.Image}
-            alt={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            className="w-full h-full object-contain filter group-hover:brightness-150 transition-all duration-300"
-          />
+          <Icon size={32} className="text-fuchsia-400 group-hover:text-white transition-all duration-300" />
         </motion.div>
         <motion.h3 
           className="text-white/90 text-xs font-medium"
