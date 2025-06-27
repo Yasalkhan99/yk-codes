@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const navItems = [
   { id: "about-me", label: "About" },
@@ -13,9 +14,9 @@ const navItems = [
 ];
 
 const socials = [
-  { name: "GitHub", icon: "/gitwhite.png", link: "https://github.com/Yasalkhan99" },
-  { name: "Instagram", icon: "/instagram.svg", link: "https://instagram.com" },
-  { name: "LinkedIn", icon: "/linkedin.svg", link: "https://www.linkedin.com/in/yasal-khan-3b9048b7/" },
+  { name: "GitHub", icon: FaGithub, link: "https://github.com/Yasalkhan99" },
+  { name: "Instagram", icon: FaInstagram, link: "https://instagram.com" },
+  { name: "LinkedIn", icon: FaLinkedin, link: "https://www.linkedin.com/in/yasal-khan-3b9048b7/" },
 ];
 
 export default function Navbar() {
@@ -157,11 +158,7 @@ export default function Navbar() {
               className="border border-slate-700 rounded-lg p-1.5 bg-black/30 hover:bg-cyan-900/30 transition"
               aria-label={social.name}
             >
-              {social.name === "GitHub" ? (
-                <Image src="/gitwhite.png" alt={social.name} width={18} height={18} className="rounded" />
-              ) : (
-                <Image src={social.icon} alt={social.name} width={18} height={18} className="rounded" />
-              )}
+              <social.icon size={18} className="text-cyan-200 hover:text-cyan-400 transition" />
             </a>
           ))}
           {/* Theme Toggle */}
@@ -256,11 +253,7 @@ export default function Navbar() {
                     className="border border-slate-700 rounded-lg p-2 bg-black/30 hover:bg-cyan-900/30 transition"
                     aria-label={social.name}
                   >
-                    {social.name === "GitHub" ? (
-                      <Image src="/gitwhite.png" alt={social.name} width={28} height={28} className="rounded" />
-                    ) : (
-                      <Image src={social.icon} alt={social.name} width={28} height={28} className="rounded" />
-                    )}
+                    <social.icon size={28} className="text-cyan-200 hover:text-cyan-400 transition" />
                   </a>
                 ))}
               </div>
