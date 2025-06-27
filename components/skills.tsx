@@ -10,11 +10,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import SkillText from "./skilltext";
 import { BoltIcon } from "@heroicons/react/24/outline";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface Skill {
   skill_name: string;
-  Image: StaticImageData;
+  Image: string;
   width: number;
   height: number;
 }

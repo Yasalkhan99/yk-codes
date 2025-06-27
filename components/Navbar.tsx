@@ -3,8 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import gitIcon from '../public/gitwhite.png';
-import instagramIcon from '../public/instagram.svg';
 
 const navItems = [
   { id: "about-me", label: "About" },
@@ -15,8 +13,8 @@ const navItems = [
 ];
 
 const socials = [
-  { name: "GitHub", icon: gitIcon, link: "https://github.com/Yasalkhan99" },
-  { name: "Instagram", icon: instagramIcon, link: "https://instagram.com" },
+  { name: "GitHub", icon: "/gitwhite.png", link: "https://github.com/Yasalkhan99" },
+  { name: "Instagram", icon: "/instagram.svg", link: "https://instagram.com" },
 ];
 
 export default function Navbar() {
