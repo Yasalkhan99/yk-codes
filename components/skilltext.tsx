@@ -22,8 +22,7 @@ const SkillText = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        duration: 0.2
       }
     }
   };

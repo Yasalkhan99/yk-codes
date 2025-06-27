@@ -42,7 +42,7 @@ const ServiceCard = ({ title, description, icon: Icon, features }: Props) => {
       className="group relative w-full h-full cursor-pointer perspective-1000"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.2 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -87,7 +87,7 @@ const ServiceCard = ({ title, description, icon: Icon, features }: Props) => {
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ duration: 0.2 }}
                 className="flex items-center gap-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
               >
                 <CheckCircleIcon className="w-4 h-4 text-blue-400" />

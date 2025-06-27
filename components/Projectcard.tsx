@@ -148,7 +148,7 @@ const ProjectCard = ({ title, description, github, tech, features, animation, ic
             transform: "translateZ(0px)",
           }}
           whileHover={{ scale: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         >
           {getAnimationComponent()}
           
@@ -165,7 +165,7 @@ const ProjectCard = ({ title, description, github, tech, features, animation, ic
                 className="px-2 py-0.5 text-xs bg-[#1a1a1a] text-white/80 rounded-full border border-[#2a2a2a]"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ duration: 0.2 }}
                 whileHover={{ 
                   scale: 1.05,
                   backgroundColor: "#2a2a2a",
@@ -199,7 +199,7 @@ const ProjectCard = ({ title, description, github, tech, features, animation, ic
                 className="flex items-center text-xs text-gray-400 group-hover:text-gray-300"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ duration: 0.2 }}
               >
                 <span className="mr-1">•</span>
                 {feature}
