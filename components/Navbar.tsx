@@ -15,6 +15,7 @@ const navItems = [
 const socials = [
   { name: "GitHub", icon: "/gitwhite.png", link: "https://github.com/Yasalkhan99" },
   { name: "Instagram", icon: "/instagram.svg", link: "https://instagram.com" },
+  { name: "LinkedIn", icon: "/linkedin.svg", link: "https://www.linkedin.com/in/yasal-khan-3b9048b7/" },
 ];
 
 export default function Navbar() {

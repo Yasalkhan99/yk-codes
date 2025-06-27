@@ -86,6 +86,11 @@ export const Skill_data = [
       src: "/discord.svg",
       link:"https://discord.com",
     },
+    {
+      name: "LinkedIn",
+      src: "/linkedin.svg",
+      link: "https://www.linkedin.com/in/yasal-khan-3b9048b7/",
+    },
   ];
   
   
@@ -175,8 +180,13 @@ export const Skill_data = [
       width: 70,
       height: 70,
     },
-    
-      ];
+    {
+      skill_name: "",
+      Image: "",
+      width: 50,
+      height: 50,
+    },
+  ];
   
   export const Full_stack = [
     
