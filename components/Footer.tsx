@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const quickLinks = [
   { name: "Home", href: "#about-me" },
@@ -22,9 +23,9 @@ const services = [
 ];
 
 const socialLinks = [
-  { name: "GitHub", icon: "/gitwhite.png", href: "https://github.com/Yasalkhan99" },
-  { name: "LinkedIn", icon: "/linkedin.svg", href: "https://www.linkedin.com/in/yasal-khan-3b9048b7/" },
-  { name: "Instagram", icon: "/instagram.svg", href: "https://instagram.com" },
+  { name: "GitHub", icon: FaGithub, href: "https://github.com/Yasalkhan99" },
+  { name: "LinkedIn", icon: FaLinkedin, href: "https://www.linkedin.com/in/yasal-khan-3b9048b7/" },
+  { name: "Instagram", icon: FaInstagram, href: "https://instagram.com" },
 ];
 
 const Footer = () => {
@@ -120,13 +121,7 @@ const Footer = () => {
                   whileTap={{ scale: 0.95 }}
                   className={`group rounded-full p-0.5 bg-black/30 border border-cyan-400/10 shadow hover:shadow-cyan-400/20 transition-all duration-300`}
                 >
-                  {social.name === 'LinkedIn' ? (
-                    <svg viewBox="0 0 32 32" fill="currentColor" className="w-4 h-4 text-cyan-300 hover:text-cyan-400">
-                      <path d="M27 0H5C2.2 0 0 2.2 0 5v22c0 2.8 2.2 5 5 5h22c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM9.4 27H5.6V12.1h3.8V27zm-1.9-17c-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1s2.1 1 2.1 2.1c0 1.1-.9 2.1-2.1 2.1zm19.5 17h-3.8v-7.2c0-1.7-.6-2.8-2.1-2.8-1.1 0-1.7.7-2 1.4-.1.3-.1.7-.1 1.1V27h-3.8s.1-12.5 0-13.9h3.8v2c.5-.8 1.4-2 3.5-2 2.6 0 4.5 1.7 4.5 5.3V27z"/>
-                    </svg>
-                  ) : (
-                    <Image src={social.icon} alt={social.name} width={14} height={14} className="group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_cyan] transition-transform" />
-                  )}
+                  <social.icon size={16} className="text-cyan-300 group-hover:text-cyan-400 transition" />
                 </motion.a>
               ))}
             </div>

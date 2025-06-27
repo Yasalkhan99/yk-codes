@@ -13,11 +13,12 @@ import { BoltIcon } from "@heroicons/react/24/outline";
 
 interface Skill {
   skill_name: string;
-  Icon: React.ComponentType<{ className?: string; size?: number }>;
+  Icon: React.ComponentType<{ className?: string; size?: number; color?: string }>;
+  color: string;
 }
 
 const SkillCard = ({ skill }: { skill: Skill }) => {
-  const { Icon } = skill;
+  const { Icon, color } = skill;
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -36,7 +37,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
           whileHover={{ rotate: 360 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
-          <Icon size={32} className="text-fuchsia-400 group-hover:text-white transition-all duration-300" />
+          <Icon size={32} color={color} />
         </motion.div>
         <motion.h3 
           className="text-white/90 text-xs font-medium"
