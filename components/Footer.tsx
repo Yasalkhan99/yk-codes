@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
 
 const quickLinks = [
   { name: "Home", href: "#about-me" },
@@ -225,11 +226,11 @@ const Footer = () => {
           </div>
           {/* Mini Tech Stack Row */}
           <div className="flex items-center gap-1">
-            <Image src="/react.png" alt="React" width={14} height={14} />
-            <Image src="/next.png" alt="Next.js" width={14} height={14} />
-            <Image src="/node-js.png" alt="Node.js" width={14} height={14} />
-            <Image src="/ts.png" alt="TypeScript" width={14} height={14} />
-            <Image src="/tailwind.png" alt="Tailwind" width={14} height={14} />
+            <FaReact size={14} color="#61DAFB" />
+            <SiNextdotjs size={14} color="#000" />
+            <FaNodeJs size={14} color="#339933" />
+            <SiTypescript size={14} color="#3178C6" />
+            <SiTailwindcss size={14} color="#06B6D4" />
           </div>
           {/* Rotating Testimonial/Quote */}
           <div className="flex items-center gap-1 italic text-slate-400 min-w-[120px]">

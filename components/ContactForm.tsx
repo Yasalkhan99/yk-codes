@@ -36,19 +36,19 @@ const servicePackages = [
 // Testimonials data
 const testimonials = [
   {
-    name: "John Smith",
+    name: "Ameen Ansari",
     role: "CEO, TechStart",
     text: "Excellent work! Delivered the project on time and exceeded our expectations.",
     rating: 5
   },
   {
-    name: "Sarah Johnson",
+    name: "Sarah Kazmi",
     role: "Product Manager",
     text: "Professional service and great communication throughout the project.",
     rating: 5
   },
   {
-    name: "Mike Brown",
+    name: "Bobby Bedi",
     role: "Startup Founder",
     text: "Highly recommended! The quality of work is outstanding.",
     rating: 5
@@ -179,7 +179,7 @@ const ContactForm = () => {
   ];
 
   return (
-    <section id="contact" className="w-full min-h-screen flex flex-col items-center justify-center py-12 relative scale-[0.83] origin-top">
+    <section id="contact" className="w-full min-h-screen flex flex-col items-center justify-center py-6 md:py-10 relative">
       <motion.div
         style={{ opacity, scale, y }}
         className="w-full max-w-5xl mx-auto px-4 relative z-10"
@@ -310,7 +310,7 @@ const ContactForm = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2 bg-black/50 border border-purple-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all duration-300 text-sm"
-                  placeholder="John Doe"
+                  placeholder="First Name"
                 />
               </div>
 
@@ -326,7 +326,7 @@ const ContactForm = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2 bg-black/50 border border-purple-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all duration-300 text-sm"
-                  placeholder="john@example.com"
+                  placeholder="khan@example.com"
                 />
               </div>
 
@@ -440,7 +440,7 @@ const ContactForm = () => {
                 >
                   <PhoneIcon className="w-5 h-5 text-purple-400" />
                   <a href="tel:+1234567890" className="text-sm hover:text-purple-400 transition-colors">
-                    +1 (234) 567-890
+                    +92 (315) 0214-059S
                   </a>
                 </motion.div>
                 <motion.div
@@ -448,7 +448,7 @@ const ContactForm = () => {
                   className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
                 >
                   <MapPinIcon className="w-5 h-5 text-purple-400" />
-                  <span className="text-sm">Your Location</span>
+                  <span className="text-sm">Khi PAKISTAN</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -479,8 +479,7 @@ const ContactForm = () => {
                         &quot;{testimonials[currentTestimonial].text}&quot;
                       </p>
                       <p className="text-sm font-semibold mt-2 text-white">
-                        - {testimonials[currentTestimonial].name},{" "}
-                        {testimonials[currentTestimonial].role}
+                        - {testimonials[currentTestimonial].name}
                       </p>
                     </motion.div>
                   </AnimatePresence>
@@ -546,7 +545,7 @@ const ContactForm = () => {
           </p>
           <a
             href="mailto:yasalkhan90@gmail.com"
-            className="inline-block px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300"
+            className="mt-8 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-bold shadow-lg hover:from-cyan-400 hover:to-purple-600 transition-all text-lg"
           >
             Get in Touch
           </a>
